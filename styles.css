@@ -1,0 +1,137 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.content {
+  display: flex;
+  width: 900px;
+  height: 500px;
+}
+.section-sedans {
+  width: 33%;
+  background-color: hsl(31, 77%, 52%);
+  padding: 45px;
+  border-radius: 10px 0 0 10px;
+}
+.section-suvs {
+  width: 33%;
+  background-color: hsl(184, 100%, 22%);
+  padding: 45px;
+}
+.section-luxury {
+  width: 33%;
+  background-color: hsl(179, 100%, 13%);
+  padding: 45px 40px 45px 45px;
+  border-radius: 0 10px 10px 0;
+}
+h1 {
+  font-family: "Big Shoulders Display";
+  font-size: 45px;
+  color: white;
+  text-transform: uppercase;
+  margin: 30px 0;
+}
+p {
+  font-family: "Lexend Deca";
+  font-size: 15px;
+  line-height: 1.5;
+  color: hsla(0, 0%, 100%, 0.75);
+}
+.learn-more-button-sedans,
+.learn-more-button-suvs,
+.learn-more-button-luxury {
+  text-align: center;
+  padding: 15px;
+  border: 3px solid white;
+  border-radius: 30px;
+  background-color: white;
+  margin-right: 50px;
+  margin-top: 90px;
+}
+.learn-more-sedans,
+.learn-more-suvs,
+.learn-more-luxury {
+  font-family: "Lexend Deca";
+  text-decoration: none;
+}
+.learn-more-sedans {
+  color: hsl(31, 77%, 52%);
+}
+.learn-more-suvs {
+  color: hsl(184, 100%, 22%);
+}
+.learn-more-luxury {
+  color: hsl(179, 100%, 13%);
+}
+
+.attribution,
+.footer-link {
+  text-align: center;
+  font-size: 12px;
+  color: hsl(220, 15%, 55%);
+  margin-top: 30px;
+}
+
+.learn-more-button-sedans:hover {
+  cursor: pointer;
+  background-color: hsl(31, 77%, 52%);
+}
+.learn-more-button-sedans:hover > .learn-more-sedans {
+  color: white;
+}
+.learn-more-button-suvs:hover {
+  cursor: pointer;
+  background-color: hsl(184, 100%, 22%);
+}
+.learn-more-button-suvs:hover > .learn-more-suvs {
+  color: white;
+}
+.learn-more-button-luxury:hover {
+  cursor: pointer;
+  background-color: hsl(179, 100%, 13%);
+}
+.learn-more-button-luxury:hover > .learn-more-luxury {
+  color: white;
+}
+@media only screen and (max-width: 375px) {
+  body {
+    height: 100%;
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+  }
+  .section-sedans {
+    width: 90%;
+    border-radius: 10px 10px 0 0;
+    margin-top: 30px;
+  }
+  .section-suvs {
+    width: 90%;
+  }
+  .section-luxury {
+    width: 90%;
+    border-radius: 0 0 10px 10px;
+  }
+  p {
+    font-size: 14px;
+  }
+  .learn-more-button-sedans,
+.learn-more-button-suvs,
+.learn-more-button-luxury {
+  margin-right: 50px;
+  margin-top: 30px;
+}
+}
