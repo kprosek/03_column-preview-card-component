@@ -1,137 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+
 * {
   box-sizing: border-box;
   margin: 0;
-  padding: 0;
+
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+  --transparent-white: hsla(0, 0%, 100%, 0.75);
+  --very-light-gray: hsl(0, 0%, 95%);
+
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 0.94rem;
 }
+
 body {
-  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  max-width: 320px;
+  margin: 5rem 0;
 }
-.content {
-  display: flex;
-  width: 900px;
-  height: 500px;
-}
-.section-sedans {
-  width: 33%;
-  background-color: hsl(31, 77%, 52%);
-  padding: 45px;
-  border-radius: 10px 0 0 10px;
-}
-.section-suvs {
-  width: 33%;
-  background-color: hsl(184, 100%, 22%);
-  padding: 45px;
-}
-.section-luxury {
-  width: 33%;
-  background-color: hsl(179, 100%, 13%);
-  padding: 45px 40px 45px 45px;
-  border-radius: 0 10px 10px 0;
-}
+
 h1 {
-  font-family: "Big Shoulders Display";
-  font-size: 45px;
-  color: white;
+  font-family: "Big Shoulders Display", sans-serif;
+  font-size: 2rem;
   text-transform: uppercase;
-  margin: 30px 0;
+  color: var(--very-light-gray);
+  margin: 1.5rem 0;
 }
+
 p {
-  font-family: "Lexend Deca";
-  font-size: 15px;
-  line-height: 1.5;
-  color: hsla(0, 0%, 100%, 0.75);
+  color: var(--transparent-white);
+  line-height: 1.5rem;
 }
-.learn-more-button-sedans,
-.learn-more-button-suvs,
-.learn-more-button-luxury {
-  text-align: center;
-  padding: 15px;
-  border: 3px solid white;
-  border-radius: 30px;
-  background-color: white;
-  margin-right: 50px;
-  margin-top: 90px;
+
+section {
+  padding: 3.5em;
 }
-.learn-more-sedans,
-.learn-more-suvs,
-.learn-more-luxury {
-  font-family: "Lexend Deca";
+
+.section-sedan {
+  background: var(--bright-orange);
+  border-radius: 10px 10px 0 0;
+}
+
+.section-suvs {
+  background: var(--dark-cyan);
+}
+
+.section-luxury {
+  background: var(--very-dark-cyan);
+  border-radius: 0 0 10px 10px;
+}
+
+.btn-learn-more {
+  text-align: left;
+  margin-top: 2rem;
+}
+
+a {
   text-decoration: none;
-}
-.learn-more-sedans {
-  color: hsl(31, 77%, 52%);
-}
-.learn-more-suvs {
-  color: hsl(184, 100%, 22%);
-}
-.learn-more-luxury {
-  color: hsl(179, 100%, 13%);
+  text-transform: capitalize;
+  padding: 0.7rem 1.5rem;
+  background-color: white;
+  border: 2px solid white;
+  border-radius: 30px;
 }
 
-.attribution,
-.footer-link {
-  text-align: center;
-  font-size: 12px;
-  color: hsl(220, 15%, 55%);
-  margin-top: 30px;
+.lnk-sedans {
+  color: var(--bright-orange);
 }
 
-.learn-more-button-sedans:hover {
-  cursor: pointer;
-  background-color: hsl(31, 77%, 52%);
+.lnk-suvs {
+  color: var(--dark-cyan);
 }
-.learn-more-button-sedans:hover > .learn-more-sedans {
+
+.lnk-luxury {
+  color: var(--very-dark-cyan);
+}
+
+.lnk-sedans:hover,
+.lnk-suvs:hover,
+.lnk-luxury:hover {
   color: white;
+  background-color: transparent;
 }
-.learn-more-button-suvs:hover {
-  cursor: pointer;
-  background-color: hsl(184, 100%, 22%);
-}
-.learn-more-button-suvs:hover > .learn-more-suvs {
-  color: white;
-}
-.learn-more-button-luxury:hover {
-  cursor: pointer;
-  background-color: hsl(179, 100%, 13%);
-}
-.learn-more-button-luxury:hover > .learn-more-luxury {
-  color: white;
-}
-@media only screen and (max-width: 375px) {
-  body {
-    height: 100%;
-  }
-  .content {
+
+@media (min-width: 1024px) {
+  main {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 90%;
-    height: auto;
-    margin: 0 auto;
+    flex-direction: row;
+    max-width: 900px;
   }
-  .section-sedans {
-    width: 90%;
-    border-radius: 10px 10px 0 0;
-    margin-top: 30px;
+
+  .section-sedan {
+    background: var(--bright-orange);
+    border-radius: 10px 0 0 10px;
   }
-  .section-suvs {
-    width: 90%;
-  }
+
   .section-luxury {
-    width: 90%;
-    border-radius: 0 0 10px 10px;
+    background: var(--very-dark-cyan);
+    border-radius: 0 10px 10px 0;
   }
-  p {
-    font-size: 14px;
+
+  .btn-learn-more {
+    margin-top: 5rem;
   }
-  .learn-more-button-sedans,
-.learn-more-button-suvs,
-.learn-more-button-luxury {
-  margin-right: 50px;
-  margin-top: 30px;
-}
 }
