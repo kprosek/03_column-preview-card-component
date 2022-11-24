@@ -1,48 +1,53 @@
-@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-
+:root {
   --bright-orange: hsl(31, 77%, 52%);
   --dark-cyan: hsl(184, 100%, 22%);
   --very-dark-cyan: hsl(179, 100%, 13%);
   --transparent-white: hsla(0, 0%, 100%, 0.75);
   --very-light-gray: hsl(0, 0%, 95%);
+}
 
-  font-family: "Lexend Deca", sans-serif;
-  font-size: 0.94rem;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  place-items: center;
+
   background-color: var(--very-light-gray);
+  font-family: 'Lexend Deca', sans-serif;
+  font-size: 0.94rem;
 }
 
 main {
   display: flex;
   flex-direction: column;
   max-width: 320px;
-  margin: 5rem 0;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
 }
 
 h1 {
-  font-family: "Big Shoulders Display", sans-serif;
+  font-family: 'Big Shoulders Display', sans-serif;
   font-size: 2.5rem;
   text-transform: uppercase;
   color: var(--very-light-gray);
   margin: 1.5rem 0;
 }
 
-p {
+.paragraph-regular {
   color: var(--transparent-white);
   line-height: 1.5rem;
 }
 
 section {
-  padding: 3.5em;
+  padding: 3em;
 }
 
 .section-sedan {
@@ -61,7 +66,7 @@ section {
 
 .btn-learn-more {
   text-align: left;
-  margin-top: 2rem;
+  margin-top: 2.5rem;
 }
 
 a {
@@ -104,16 +109,15 @@ a {
   }
 
   .section-sedan {
-    background: var(--bright-orange);
     border-radius: 10px 0 0 10px;
   }
 
   .section-luxury {
-    background: var(--very-dark-cyan);
     border-radius: 0 10px 10px 0;
   }
 
   .btn-learn-more {
-    margin-top: 7rem;
+    margin-top: 5rem;
+    margin-bottom: 1rem;
   }
 }
