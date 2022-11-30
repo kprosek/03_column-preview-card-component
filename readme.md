@@ -21,8 +21,6 @@ Users should be able to:
 - Solution URL: https://www.frontendmentor.io/solutions/3columnpreviewcardcomponent-YZZhwVFsQ4
 - Live Site URL: https://kprosek.github.io/03_column-preview-card-component/
 
-## My process
-
 ### Built with
 
 - HTML5 & CSS3
